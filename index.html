@@ -524,7 +524,7 @@ footer {
                 </div>
                 <div>
                     <h4>GitHub</h4>
-                    <a href="https://github.com/remrcaluza2a" target="_blank">https://github.com/remrcaluza2a</a>
+                    <a href="https://github.com/remrcaluzadevp" target="_blank">https://github.com/remrcaluzadevp</a>
                 </div>
             </div>
             <form id="contact-form">
@@ -552,9 +552,7 @@ footer {
 
 <script>
 const projects = [
-    { title: "Personal Portfolio", description: "Professional portfolio website showcasing skills, projects, and contact information.", tags: ["HTML", "CSS", "JavaScript"] },
-    { title: "Calculator", description: "Functional calculator with basic arithmetic operations and clean interface.", tags: ["HTML", "JavaScript"] },
-    { title: "Digital Clock", description: "Real-time digital clock displaying current time and date.", tags: ["HTML", "CSS", "JavaScript"] },
+    { title: "My Portfolio", description: "Professional portfolio website showcasing skills, projects, and contact information.", tags: ["HTML", "CSS", "JavaScript"] },
 ];
 
 function renderProjects() {
@@ -574,7 +572,7 @@ function renderProjects() {
 }
 
 async function loadGitHubRepos() {
-    const username = 'remrcaluza2a';
+    const username = 'remrcaluzadevp';
     try {
         const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
         if (!res.ok) throw new Error();
