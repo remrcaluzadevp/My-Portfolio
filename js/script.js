@@ -3,7 +3,12 @@ const projects = [
     { 
         title: "Personal Portfolio", 
         description: "Professional portfolio website showcasing skills, projects, and contact information.", 
-        tags: ["HTML", "CSS", "JavaScript"], link: "https://remrcaluzadevp.github.io/My-Portfolio/"} 
+        tags: ["HTML", "CSS", "JavaScript"], 
+        link: "https://remrcaluzadevp.github.io/My-Portfolio/"}
+    { title: "Carpool Planner", 
+    description: "A convenient tool to organize carpool schedules, routes, and passengers.", 
+    tags: ["HTML", "CSS", "JavaScript"], 
+    link: "https://your-carpool-site.netlify.app" }
 ];
 
 function renderProjects() {
