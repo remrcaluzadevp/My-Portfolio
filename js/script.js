@@ -3,8 +3,7 @@ const projects = [
     { 
         title: "Personal Portfolio", 
         description: "Professional portfolio website showcasing skills, projects, and contact information.", 
-        tags: ["HTML", "CSS", "JavaScript"] 
-    }
+        tags: ["HTML", "CSS", "JavaScript"], link: "https://remrcaluzadevp.github.io/My-Portfolio/"} 
 ];
 
 function renderProjects() {
@@ -17,6 +16,7 @@ function renderProjects() {
                     <h3>${p.title}</h3>
                     <p>${p.description}</p>
                     <div>${tags}</div>
+                    <a href="${p.link}" target="_blank" style="display: inline-block; margin-top: 0.8rem; color: var(--accent); font-weight: 500; text-decoration: none;">View Project →</a>
                 </div>
             </div>
         `;
