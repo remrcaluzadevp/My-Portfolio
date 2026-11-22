@@ -24,7 +24,7 @@ function renderProjects() {
 }
 
 async function loadGitHubRepos() {
-    const username = 'remrcaluza2a';
+    const username = 'remrcaluzadevp';
     try {
         const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
         if (!res.ok) throw new Error();
