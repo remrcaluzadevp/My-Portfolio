@@ -1,24 +1,28 @@
-
 const projects = [
     { 
-        title: "Personal Portfolio", 
+        title: "My Portfolio", 
         description: "Professional portfolio website showcasing skills, projects, and contact information.", 
         tags: ["HTML", "CSS", "JavaScript"], 
-        link: "https://remrcaluzadevp.github.io/My-Portfolio/"}
-    { title: "Carpool Planner", 
-    description: "A convenient tool to organize carpool schedules, routes, and passengers.", 
-    tags: ["HTML", "CSS", "JavaScript"], 
-    link: "https://your-carpool-site.netlify.app" }
+        link: "https://remrcaluzadevp.github.io/My-Portfolio/" 
+    },
+    { 
+        title: "Carpool Planner", 
+        description: "A convenient tool to organize carpool schedules, routes, and passengers.", 
+        tags: ["TypeScript", "HTML", "CSS"], 
+        link: "https://your-carpool-site.netlify.app" 
+    }
 ];
 
 function renderProjects() {
     const container = document.getElementById('projects-grid');
+    container.innerHTML = ''; // Clear first to avoid duplicates
+    
     projects.forEach(p => {
         const tags = p.tags.map(t => `<span class="project-tag">${t}</span>`).join('');
         container.innerHTML += `
             <div class="project-card">
                 <div class="project-content">
-                    <h3>${p.title}</h3>
+                    <h3><a href="${p.link}" target="_blank" style="color: var(--primary); text-decoration: none;">${p.title}</a></h3>
                     <p>${p.description}</p>
                     <div>${tags}</div>
                     <a href="${p.link}" target="_blank" style="display: inline-block; margin-top: 0.8rem; color: var(--accent); font-weight: 500; text-decoration: none;">View Project →</a>
@@ -35,6 +39,7 @@ async function loadGitHubRepos() {
         if (!res.ok) throw new Error();
         const repos = await res.json();
         const container = document.getElementById('github-repos');
+        container.innerHTML = '';
         repos.forEach(r => {
             container.innerHTML += `
                 <div class="repo-item">
@@ -74,10 +79,6 @@ form.addEventListener('submit', e => {
 
 window.addEventListener('scroll', () => {
     document.getElementById('back-top').style.display = window.scrollY > 400 ? 'block' : 'none';
-});
-
-document.getElementById('back-top').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 renderProjects();
